@@ -1,0 +1,146 @@
+body {
+    margin: auto;
+    background-color: #E1A95F;
+    font-family: 'Ranchers', cursive;
+    letter-spacing: 1px;
+}
+
+header {
+    background-color: antiquewhite;
+}
+
+main {
+    margin: 1rem;
+}
+
+h1 {
+    display: table;
+    margin: auto;
+    min-height: 10rem;
+    line-height: 10rem;
+    vertical-align: middle;
+}
+
+h2 {
+    display: table;
+    margin: auto;
+    font-size: 30px;
+}
+
+h3,
+h4 {
+    font-size: 25px;
+}
+
+
+p {
+    font-size: 20px;
+}
+
+nav {
+    background-color: #E1A95F;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 10px black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+nav li {
+    font-size: 150%;
+    color: #faebd7;
+    background-color: #a87f49;
+    list-style: none;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px outset #a87f49;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+nav li a {
+    color: #faebd7;
+    text-decoration: none;
+}
+
+nav li:hover,
+li.aktuell {
+    text-decoration: underline;
+    border: 2px inset #a87f49;
+    box-shadow: none;
+}
+
+ul.brainstorm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: minmax(120px, auto);
+    grid-auto-flow: dense;
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto;
+}
+
+.brainstorm li:not(.sketch) {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-width: 200px;
+    max-width: 200px;
+    border: 1px solid #a87f49;
+    border-top: none;
+    box-shadow: 0px 0px 5px black;
+    display: block;
+    margin: 4rem auto;
+    padding: 4rem;
+    transform: rotate(4deg);
+    border-bottom-right-radius: 60px 5px;
+    background: rgb(207,159,94);
+    background: linear-gradient(180deg, rgba(207,159,94,1) 65%, rgba(255,199,124,1) 100%);
+    transition: all 0.1s linear; 
+}
+.brainstorm li:not(.sketch)::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.025);
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0;
+    height: 40px;
+    z-index: -1;
+}
+.brainstorm li:not(.sketch)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -4px;
+    width: 100%;
+    height: 115px;
+    background-image: linear-gradient(173deg, rgba(0,0,0,0) 90%, rgba(0,0,0,0.4) 90%);
+    transform: rotate(6deg);
+    z-index: -1;
+    filter: blur(2px);
+}
+.brainstorm li:not(.sketch):hover {
+    transform: rotate(0deg);
+    transform: scale(1.5);
+}
+
+.brainstorm li img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+.brainstorm li.sketch {
+    grid-column: span 1;
+    grid-row: span 1;
+    border: 1px solid #a87f49;
+    border-top: none;
+    box-shadow: 0px 0px 5px black;
+    display: block;
+    padding: 4rem;
+    background: rgb(207,159,94);
+    background: linear-gradient(180deg, rgba(207,159,94,1) 65%, rgba(255,199,124,1) 100%); 
+    margin: 2rem 1rem;
+}
